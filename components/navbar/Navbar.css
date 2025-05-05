@@ -1,0 +1,64 @@
+nav li:hover {
+  color: #d87f11;
+}
+
+.nav-button {
+  width: 20%;
+  height: 60px;
+  background-color: #ff981e;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #d87f11;
+  color: #fff;
+  border: 1px solid #d87f11;
+}
+
+.mobile-nav {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.mobile-nav li:hover {
+  color: #d87f11;
+}
+
+@media screen and (max-width: 1000px) {
+  .site-logo {
+    width: 70px;
+    height: 50px;
+  }
+  .nav-button {
+    width: auto;
+    height: 50px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  nav li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .site-logo {
+    width: 60px;
+    height: 40px;
+  }
+  .nav-button {
+    width: auto;
+    height: 40px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  nav li {
+    font-size: 15px;
+  }
+}

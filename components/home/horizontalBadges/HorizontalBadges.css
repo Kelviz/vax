@@ -1,0 +1,57 @@
+.horizontal-badges-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #148782;
+  padding: 20px 0;
+}
+
+.scroll-wrapper {
+  display: flex;
+  gap: 10px;
+  animation: scroll 30s linear infinite;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.badge-image {
+  width: 150px;
+  object-fit: contain;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll-wrapper {
+    gap: 5px;
+  }
+  .badge-image {
+    width: 100px;
+    object-fit: contain;
+    height: 70px;
+  }
+
+  .scroll-content {
+    gap: 5px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -70%
+    ); /* Move by half the width to show the duplicate set */
+  }
+}
+
+/* Pause animation on hover */
+.scroll-wrapper:hover {
+  animation-play-state: paused;
+}

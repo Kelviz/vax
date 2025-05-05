@@ -1,0 +1,113 @@
+.section-eight-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 50px 100px;
+}
+
+.section-eight-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.section-eight-content {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.section-eight-content::-webkit-scrollbar {
+  display: none;
+}
+
+.patient-card {
+  flex: 0 0 auto;
+  display: flex;
+  width: 560px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff981e;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: #e7860f;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left-button {
+  left: -20px;
+}
+
+.right-button {
+  right: -20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-eight-container {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .section-eight-container {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-card {
+    width: 100%;
+  }
+
+  .patient-image {
+    height: 230px;
+  }
+
+  .feedback-text {
+    font-size: 14px;
+  }
+
+  .section-eight-content {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .scroll-button {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .feedback-text {
+    font-size: 13px;
+  }
+}

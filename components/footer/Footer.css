@@ -1,0 +1,77 @@
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url("/images/Rectangle 422.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: #fff;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 100px 50px 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-container {
+    padding: 120px 50px;
+  }
+
+  .footer-second-section {
+    padding: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .footer-container {
+    padding: 120px 20px;
+  }
+  .footer-second-section {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer-container {
+    padding: 50px 20px;
+  }
+  .footer-second-section {
+    padding: 20px;
+  }
+  .footer-first-section {
+    flex-direction: column;
+  }
+  .footer-nav-links {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer-nav-links {
+    flex-direction: column;
+  }
+  .footer-nav-links div {
+    width: auto;
+  }
+
+  .footer-second-section {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .footer-socials {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .footer-dwnload-app {
+    width: 100%;
+  }
+}
