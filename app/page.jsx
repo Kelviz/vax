@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between min-h-screen">
       <HeroSection />
+
       <HorizontalBadges />
       <SectionThree />
       <HomeSectionFour />
@@ -21,17 +22,6 @@ export default function Home() {
       <SectionSeven />
       <SectionEight />
       <SectionNine />
-
-      {/* 
-      
-     
-       
-      
-      
-      
-      
-      
-      */}
     </main>
   );
 }
