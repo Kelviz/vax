@@ -38,16 +38,32 @@ const MobileNav = () => {
             />
           </div>
           <div className="w-full flex flex-col mt-4 gap-4">
-            <Link href="/features" className="text-lg font-bold">
+            <Link
+              href="/features"
+              className="text-lg font-bold"
+              onClick={() => setIsOpen(false)}
+            >
               Features
             </Link>
-            <Link href="/provisions" className="text-lg font-bold">
+            <Link
+              href="/provisions"
+              className="text-lg font-bold"
+              onClick={() => setIsOpen(false)}
+            >
               Provisions
             </Link>
-            <Link href="/record-keeping" className="text-lg font-bold">
+            <Link
+              href="/record-keeping"
+              className="text-lg font-bold"
+              onClick={() => setIsOpen(false)}
+            >
               Record Keeping
             </Link>
-            <Link href="/community" className="text-lg font-bold">
+            <Link
+              href="/community"
+              className="text-lg font-bold"
+              onClick={() => setIsOpen(false)}
+            >
               Community
             </Link>
 

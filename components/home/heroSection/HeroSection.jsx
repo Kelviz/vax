@@ -49,7 +49,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="hero-image-container  h-[400px] relative lg:mt-4 md:mt-2 mt-4 flex justify-center items-center">
+        <div className="hero-image-container  h-[400px] relative lg:mt-4 md:mt-2 mt-3 flex justify-center items-center">
           <Image
             src="/images/Rectangle-phone.png"
             alt="hero"

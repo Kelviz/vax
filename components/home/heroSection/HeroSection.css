@@ -1,6 +1,6 @@
 .hero-section {
   width: 100%;
-  height: 110vh;
+
   background-image: url("/images/hero.png");
   background-size: cover;
   background-position: center;
@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 100px;
+  padding-bottom: 50px;
 }
 
 .hero-image-container {
@@ -31,12 +32,14 @@
 @media screen and (max-width: 1000px) {
   .hero-section {
     padding: 0 50px;
+    padding-bottom: 70px;
   }
 }
 
 @media screen and (max-width: 826px) {
   .hero-section {
     padding: 0 20px;
+    padding-bottom: 70px;
   }
 
   .hero-image {
@@ -44,9 +47,6 @@
   }
 
   @media screen and (max-width: 768px) {
-    .hero-section {
-      height: 140vh;
-    }
     .hero-image-container {
       width: 100%;
     }

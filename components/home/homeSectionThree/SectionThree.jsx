@@ -88,12 +88,12 @@ const SectionThree = () => {
           </div>
 
           {/* Dots Navigation */}
-          <div className="flex justify-center items-center gap-2 mt-6">
+          <div className="flex absolute z-20 top-[250px] justify-center items-center gap-2 mt-8">
             {secThreePosts.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`w-2 h-2 rounded-full ${
+                className={`w-3 h-3 rounded-full ${
                   activeIndex === index ? "bg-[#FF981E]" : "bg-gray-300"
                 }`}
                 aria-label={`Show slide ${index + 1}`}
@@ -103,12 +103,12 @@ const SectionThree = () => {
         </div>
       </div>
 
-      <div className="absolute left-line top-[150px] left-[20px] lg:left-[100px] md:left-[30px]">
+      <div className="absolute left-line top-[180px] left-[20px] lg:left-[100px] md:left-[30px]">
         <div className="w-[150px] h-[10px]  bg-[#148782] rounded-br-full rounded-tr-full"></div>
         <div className="w-[10px] h-[150px]  bg-[#148782] rounded-b-full"></div>
       </div>
 
-      <div className="absolute bottom-[5px] flex justify-end items-end flex-row-reverse right-[20px]  lg:right-[100px] md:right-[30px]">
+      <div className="absolute bottom-[-45px]  flex justify-end items-end flex-row-reverse right-[20px]  lg:right-[100px] md:right-[30px]">
         <div className="w-[10px] h-[150px]  bg-[#148782] rounded-t-full"></div>
         <div className="w-[150px] h-[10px]  bg-[#148782] rounded-bl-full rounded-tl-full"></div>
       </div>
