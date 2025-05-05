@@ -103,12 +103,12 @@ const SectionThree = () => {
         </div>
       </div>
 
-      <div className="absolute left-line top-[180px] left-[20px] lg:left-[100px] md:left-[30px]">
+      <div className="absolute left-line lg:top-[180px] md:top-[180px] top-[160px] left-[20px] lg:left-[100px] md:left-[30px]">
         <div className="w-[150px] h-[10px]  bg-[#148782] rounded-br-full rounded-tr-full"></div>
         <div className="w-[10px] h-[150px]  bg-[#148782] rounded-b-full"></div>
       </div>
 
-      <div className="absolute bottom-[-45px]  flex justify-end items-end flex-row-reverse right-[20px]  lg:right-[100px] md:right-[30px]">
+      <div className="absolute lg:bottom-[45px] md:bottom-[45px] bottom-[-35px]  flex justify-end items-end flex-row-reverse right-[20px]  lg:right-[100px] md:right-[30px]">
         <div className="w-[10px] h-[150px]  bg-[#148782] rounded-t-full"></div>
         <div className="w-[150px] h-[10px]  bg-[#148782] rounded-bl-full rounded-tl-full"></div>
       </div>
