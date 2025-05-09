@@ -3,7 +3,6 @@ import "./globals.css";
 import TopBar from ".././components/topBar/TopBar";
 
 import Footer from ".././components/footer/Footer";
-import MobileNav from ".././components/navbar/MobileNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
       >
         <div className="relative">
           <TopBar />
-          <MobileNav />
           {children}
         </div>
         <Footer />

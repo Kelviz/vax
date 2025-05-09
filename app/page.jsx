@@ -10,6 +10,8 @@ import SectionEight from ".././components/home/homeSectionEight/SectionEight";
 import SectionNine from ".././components/home/homeSectionNine/SectionNine";
 
 export default function Home() {
+  const text = "Join us on the journey download our app for free today";
+  const imgUrl = "/images/Rectangle-phone.png";
   return (
     <main className="flex flex-col items-center justify-between min-h-screen">
       <HeroSection />
@@ -21,7 +23,7 @@ export default function Home() {
       <SectionSix />
       <SectionSeven />
       <SectionEight />
-      <SectionNine />
+      <SectionNine text={text} imgUrl={imgUrl} />
     </main>
   );
 }

@@ -1,0 +1,41 @@
+.feature-section-three-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.feature-section-three-contents {
+  width: 100%;
+  padding: 50px 100px;
+  background-color: #148782;
+}
+
+@media screen and (max-width: 1000px) {
+  .feature-section-three-contents {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .feature-section-three-contents {
+    padding: 50px 20px;
+  }
+}
+
+/* Mobile slider transitions */
+.feature-section-three-container h3,
+.feature-section-three-container p,
+.feature-section-three-container img {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation dots animation */
+.feature-section-three-container button.w-2 {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button hover effects */
+.feature-section-three-container button:hover {
+  background-color: #e5e5e5;
+}

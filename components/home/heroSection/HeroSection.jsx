@@ -2,12 +2,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../navbar/Navbar";
+import MobileNav from "../../navbar/MobileNav";
 import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
     <div className="hero-section">
       <Navbar imgUrl={`/images/logo-black.png`} textColor={`text-black`} />
+      <MobileNav logoUrl={`/images/logo-black.png`} textColor={`text-black`} />
       <div className="w-full flex items-center flex-col lg:flex-row md:flex-row justify-between lg:mt-8 mt-[4rem]">
         <div className="hero-text-container flex flex-col">
           <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-black">

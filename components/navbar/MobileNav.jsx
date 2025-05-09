@@ -6,15 +6,15 @@ import { RiMenu3Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import "./Navbar.css";
 
-const MobileNav = () => {
+const MobileNav = ({ logoUrl, textColor }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full bg-none flex absolute  justify-between items-center lg:hidden md:hidden ">
-      <div className="w-full  flex justify-between  items-center p-2 relative">
+    <div className="w-full bg-none flex  justify-between items-center lg:hidden md:hidden ">
+      <div className="w-full  flex justify-between  items-center py-2 relative">
         <Link href="/" className="flex items-center  ">
           <Image
-            src="/images/logo-black.png"
+            src={logoUrl}
             alt="logo"
             width={500}
             height={500}
@@ -22,9 +22,9 @@ const MobileNav = () => {
           />
         </Link>
 
-        <div className="w-[50px] h-[50px]">
+        <div className="w-[50px] h-[50px] flex justify-end">
           <RiMenu3Line
-            className="text-4xl cursor-pointer text-black"
+            className={`text-4xl cursor-pointer ${textColor}`}
             onClick={() => setIsOpen(true)}
           />
         </div>
