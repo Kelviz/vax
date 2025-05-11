@@ -65,8 +65,8 @@ const SectionThree = () => {
   };
 
   return (
-    <div className="feature-section-three-container">
-      <h1 className="text-lg lg:text-4xl md:text-3xl text-center mb-12">
+    <div className="feature-section-three-container lg:mt-[8rem] md:mt-[8rem] mt-[12rem] ">
+      <h1 className="text-lg lg:text-4xl md:text-3xl text-center mb-12 px-4">
         Get issues resolved from the comfort of your home
       </h1>
 
@@ -124,7 +124,7 @@ const SectionThree = () => {
           {/* Left Button */}
           <button
             onClick={handleMobilePrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center z-10"
+            className="absolute  left-[-2%] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center z-10"
           >
             <MdChevronLeft size={24} />
           </button>
@@ -151,7 +151,7 @@ const SectionThree = () => {
           {/* Right Button */}
           <button
             onClick={handleMobileNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center z-10"
+            className="absolute right-[-2%] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center z-10"
           >
             <MdChevronRight size={24} />
           </button>

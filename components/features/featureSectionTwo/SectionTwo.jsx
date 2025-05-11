@@ -10,15 +10,15 @@ const SectionTwo = () => {
         <p className="lg:text-[16px] md:text-[16px] text-[14px] text-center mt-3">
           What you get?
         </p>
-        <h1 className="font-bold lg:text-4xl md:text-3xl text-2xl text-center mt-3">
+        <h1 className="font-bold lg:text-4xl md:text-3xl text-2xl text-center mt-3 px-4">
           We offer you a wild range of services
         </h1>
-        <p className="lg:text-[16px] md:text-[16px] text-[14px] text-center mt-3">
+        <p className="lg:text-[16px] md:text-[16px] text-[14px] text-center mt-3 px-4">
           Relax, stay home and get all the medical attention that you need.
         </p>
       </div>
 
-      <div className="w-full min-h-[30vh] flex justify-center items-center lg:mt-[8rem] md:mt-[8rem] mt-8 flex-col">
+      <div className="w-full min-h-[30vh]  flex justify-center items-center lg:mt-[8rem] md:mt-[8rem] mt-8 flex-col">
         <div className="w-full  flex lg:flex-row md:flex-row flex-col-reverse  justify-center items-center lg:gap-[5rem] md:gap[2rem] gap-[2rem]">
           <div className="lg:w-[300px]  md:w-[300px] w-[300px] lg:mt-0 md:mt-0 mt-[12rem]  flex lg:justify-start md:justify-start justify-center items-center relative">
             <div className="w-full lg:h-[300px] md:h-[300px] h-[300px] rounded-full bg-[#FF981E] absolute left-0 top-1/2 -translate-y-1/2 flex  justify-center items-center">
@@ -39,7 +39,7 @@ const SectionTwo = () => {
               </p>
             </div>
 
-            <div className="w-[150px] h-[110px] shadow-lg bg-[#148782] rounded-3xl flex items-center absolute left-[-9%] top-[10%]">
+            <div className="w-[150px] h-[110px] shadow-lg bg-[#148782] rounded-3xl flex items-center absolute left-[-6%] top-[10%]">
               <p className="text-[12px] text-center p-1 text-white">
                 Our tool provides accurate and timely data to help individuals,
                 healthcare providers
@@ -70,7 +70,7 @@ const SectionTwo = () => {
         </div>
       </div>
 
-      <div className="w-full lg:min-h-[30vh] md:min-h-[30vh] min-h-[130vh] flex justify-center items-center lg:mt-[15rem] md:mt-[15rem] mt-[5rem] flex-col">
+      <div className="w-full min-h-[30vh]  flex justify-center items-center lg:mt-[15rem] md:mt-[15rem] mt-[15rem] flex-col">
         <div className="w-full flex lg:flex-row md:flex-row flex-col justify-center items-center gap-8">
           <div className="lg:w-[50%] md:w-[40%] w-[100%] flex flex-col">
             <h1 className="font-bold lg:text-3xl md:text-2xl text-lg text-center lg:text-left md:text-left">
@@ -111,7 +111,7 @@ const SectionTwo = () => {
               </p>
             </div>
 
-            <div className="w-[150px] h-[110px] shadow-lg bg-[#148782] rounded-3xl flex justify-center items-center absolute left-[62%] top-[20%]">
+            <div className="w-[150px] h-[110px] shadow-lg bg-[#148782] rounded-3xl flex justify-center items-center absolute left-[55%] top-[20%]">
               <p className="text-[12px] text-center p-1 text-white">
                 This tool ensures you avoid missed doses, and maintain a clear
                 medication history

@@ -80,7 +80,10 @@
 
 @media screen and (max-width: 826px) {
   .section-eight-container {
-    padding: 50px 20px;
+    padding: 20px;
+  }
+  .section-eight-content {
+    padding: 0px;
   }
 }
 

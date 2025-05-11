@@ -13,7 +13,7 @@ const FeatureHero = () => {
         />
       </div>
 
-      <div className="w-full flex  feature-hero-contents  justify-between relative mt-[5rem] lg:flex-row md:flex-row flex-col">
+      <div className="w-full flex  feature-hero-contents  justify-between relative lg:mt-[5rem] md:mt-[3rem] mt-[2rem] lg:flex-row md:flex-row flex-col">
         <div className="lg:w-[40%] md:w-[40%] pr-14 w-full  flex flex-col ">
           <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-white">
             Easy access to Innovations and Solutions for You and your Baby

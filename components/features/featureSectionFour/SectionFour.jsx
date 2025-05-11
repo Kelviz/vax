@@ -3,7 +3,7 @@ import "./SectionFour.css";
 
 const SectionFour = () => {
   return (
-    <div className="feature-section-four-container">
+    <div className="feature-section-four-container lg:mt-[5rem] md:mt-[5rem] mt-[2rem]">
       <div className="w-full flex lg:flex-row md:flex-row flex-col lg:gap-4 md:gap-2 gap-8 justify-center items-center">
         <div className="lg:w-[45%] md:w-[50%] w-full shadow-lg border-l-12 bg-[#148782] text-white border-[#FF981E] flex flex-col justify-center items-center">
           <Image
