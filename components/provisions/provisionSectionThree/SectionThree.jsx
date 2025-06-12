@@ -58,7 +58,7 @@ const SectionThree = () => {
             <h2 className="font-bold text-lg md:text-[18px]  text-center mt-[6rem] md:mt-[3rem]">
               Vaccine availability
             </h2>
-            <p className="mt-4 md:mt-2 md:text-[16px] text-center p-4">
+            <p className="mt-4 md:mt-2 md:text-[16px] text-center p-3">
               These vaccines are typically offered at no cost or are covered by
               insurance and national immunization programs
             </p>
