@@ -1,0 +1,19 @@
+.provision-sec-two-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .provision-sec-two-container {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .provision-sec-two-container {
+    padding: 50px 20px;
+  }
+}

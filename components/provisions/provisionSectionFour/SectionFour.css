@@ -1,0 +1,46 @@
+.provision-section-four-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 180px 100px;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  background-color: #148782;
+}
+
+.provision-section-four-top-shape {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: -7rem;
+  left: 0;
+  background-image: url("/images/Rectangle 1221.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.provision-section-four-bottom-shape {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  background-image: url("/images/Rectangle 1221.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1000px) {
+  .provision-section-four-container {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .provision-section-four-container {
+    padding: 50px 20px;
+  }
+}

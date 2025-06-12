@@ -1,0 +1,45 @@
+.provision-hero-container {
+  width: 100%;
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+/* Mobile background image transition */
+.provision-hero-container img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Navigation dots hover effect */
+.provision-hero-container button {
+  transition: all 0.3s ease-in-out;
+}
+
+.provision-hero-container button:hover {
+  opacity: 0.8;
+}
+
+/* Smooth overlay transition */
+.provision-hero-container .bg-black\/50 {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.provision-navbar {
+  width: 100%;
+  padding: 0px 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .provision-navbar {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .provision-navbar {
+    padding: 0 20px;
+  }
+}

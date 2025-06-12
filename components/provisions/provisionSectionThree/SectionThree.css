@@ -1,0 +1,21 @@
+.provision-sec-three-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+  padding-bottom: 0px;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .provision-sec-three-container {
+    padding: 50px;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .provision-sec-three-container {
+    padding: 0px 20px;
+  }
+}
