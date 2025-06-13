@@ -16,8 +16,8 @@ const Navbar = ({ imgUrl, textColor }) => {
           className="w-[100px] h-[60px] object-cover site-logo"
         />
       </Link>
-      <div className="flex w-[87%] justify-between  items-center mr-1">
-        <nav className="flex w-[80%] lg:justify-center items-center gap-8">
+      <div className="flex justify-between  items-center mr-1">
+        <nav className="flex  lg:justify-center items-center gap-8">
           <ul className="flex items-center gap-8">
             <li className="text-[18px] font-semibold cursor-pointer">
               <Link href="/features">Features</Link>
@@ -33,8 +33,8 @@ const Navbar = ({ imgUrl, textColor }) => {
             </li>
           </ul>
         </nav>
-        <button className="nav-button">Download App</button>
       </div>
+      <button className="nav-button">Download App</button>
     </header>
   );
 };

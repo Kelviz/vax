@@ -1,0 +1,23 @@
+.record-section-six-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 100px;
+        background-color: var(--secondary-color);
+        margin-top: 3rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+        .record-section-six-container {
+          padding: 50px;
+        }
+      }
+      
+      @media screen and (max-width: 826px) {
+        .record-section-six-container {
+          padding: 20px;
+        }
+      
+      }

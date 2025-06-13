@@ -1,0 +1,58 @@
+.record-section-four-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+  margin: 3rem 0;
+
+}
+
+
+@media screen and (max-width: 1000px) {
+  .record-section-four-container {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .record-section-four-container {
+    padding: 20px;
+  }
+
+}
+
+
+@media screen and (max-width: 614px) {
+.record-sec-four-4{
+  margin-top: 130px;
+}
+}
+
+
+@media screen and (max-width: 500px) {
+  
+  .record-sec-four-4{
+    margin-top: 105px;
+  }
+  }
+
+    
+
+
+
+    @media screen and (max-width: 420px) {
+      
+      .record-sec-four-4{
+        margin-top: 85px;
+      }
+      }
+
+
+      @media screen and (max-width: 330px) {
+
+        .record-sec-four-4{
+          margin-top: 65px;
+        }
+        }
+  
+  

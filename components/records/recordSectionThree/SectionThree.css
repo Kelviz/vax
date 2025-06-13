@@ -1,0 +1,25 @@
+.record-section-three-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.record-section-three-contents {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 50px 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .record-section-three-contents {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .record-section-three-contents {
+    padding: 20px;
+  }
+}

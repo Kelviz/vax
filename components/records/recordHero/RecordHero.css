@@ -1,0 +1,186 @@
+.record-hero-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  padding: 10px 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .record-hero-section {
+    padding: 10px 50px;
+  }
+
+  .record-hero-1 {
+    left: -5%;
+  }
+
+  .record-hero-2 {
+    right: -5%;
+  }
+
+  .record-hero-3 {
+    left: -13%;
+  }
+
+  .record-hero-4 {
+    right: -13%;
+  }
+
+  .record-hero-5 {
+    left: -10%;
+  }
+
+  .record-hero-6 {
+    right: -10%;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .record-hero-section {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 761px) {
+  .record-hero-1 {
+    left: -10%;
+    width: 30px;
+    height: 30px;
+    top: -20px;
+  }
+
+  .record-hero-2 {
+    right: -10%;
+    width: 30px;
+    height: 30px;
+    top: -20px;
+  }
+
+  .record-hero-3 {
+    left: -18%;
+    width: 45px;
+    height: 45px;
+    top: 20px;
+  }
+
+  .record-hero-4 {
+    right: -18%;
+    width: 45px;
+    height: 45px;
+    top: 20px;
+  }
+
+  .record-hero-5 {
+    left: -15%;
+    width: 55px;
+    height: 55px;
+    top: 80px;
+  }
+
+  .record-hero-6 {
+    right: -15%;
+    width: 55px;
+    height: 55px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .record-hero-1 {
+    left: -20%;
+  }
+
+  .record-hero-2 {
+    right: -20%;
+  }
+
+  .record-hero-3 {
+    left: -30%;
+  }
+
+  .record-hero-4 {
+    right: -30%;
+  }
+
+  .record-hero-5 {
+    left: -27%;
+  }
+
+  .record-hero-6 {
+    right: -27%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .record-hero-1 {
+    left: -35%;
+  }
+
+  .record-hero-2 {
+    right: -35%;
+  }
+
+  .record-hero-3 {
+    left: -47%;
+  }
+
+  .record-hero-4 {
+    right: -47%;
+  }
+
+  .record-hero-5 {
+    left: -44%;
+  }
+
+  .record-hero-6 {
+    right: -44%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .record-hero-1 {
+    left: -45%;
+    width: 25px;
+    height: 25px;
+  }
+
+  .record-hero-2 {
+    right: -45%;
+    width: 25px;
+    height: 25px;
+  }
+
+  .record-hero-3 {
+    left: -57%;
+    width: 35px;
+    height: 35px;
+  }
+
+  .record-hero-4 {
+    right: -57%;
+    width: 35px;
+    height: 35px;
+  }
+
+  .record-hero-5 {
+    left: -54%;
+    width: 45px;
+    height: 45px;
+  }
+
+  .record-hero-6 {
+    right: -54%;
+    width: 45px;
+    height: 45px;
+  }
+
+  .record-hero-7 {
+    width: 330px;
+  }
+
+  .h-text {
+    font-size: 12px;
+  }
+}
