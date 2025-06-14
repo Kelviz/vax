@@ -18,7 +18,7 @@ const RecordHero = () => {
         </p>
       </div>
 
-      <div className="w-full h-[370px]  flex justify-center ">
+      <div className="w-full h-[320px]  flex justify-center ">
         <div className="w-[50%] flex items-center justify-center relative ">
           <Image
             src="/images/record-hero-1.png"
@@ -73,7 +73,7 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-7 md:absolute lg:z-50 md:z-50 z-0 md:w-[250px] w-[200px] md:h-[450px]  h-[370px]  md:top-[30px] top-[30px] md:left-1/2 md:-translate-x-1/2"
+            className="record-hero-7 md:absolute lg:z-50 md:z-50 z-0 md:w-[250px] w-[200px] md:h-[450px]  h-[320px]  md:top-[30px] top-[30px] md:left-1/2 md:-translate-x-1/2"
           />
         </div>
       </div>

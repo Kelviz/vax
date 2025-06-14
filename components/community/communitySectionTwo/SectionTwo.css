@@ -1,0 +1,20 @@
+.community-section-two-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .community-section-two-container {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .community-section-two-container {
+    padding: 20px;
+  }
+}
