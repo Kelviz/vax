@@ -3,7 +3,7 @@
 
   background-image: url("/images/hero.png");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -20,51 +20,49 @@
 }
 
 .hero-image {
-  width: 220px;
-}
-
-@media screen and (max-width: 1200px) {
-  .hero-image {
-    width: 200px;
-  }
+  width: 240px;
+  height: 450px;
 }
 
 @media screen and (max-width: 1000px) {
   .hero-section {
     padding: 0 50px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
 }
 
 @media screen and (max-width: 826px) {
   .hero-section {
     padding: 0 20px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
 
   .hero-image {
-    width: 170px;
+    width: 230px;
+    height: 430px;
   }
 
   @media screen and (max-width: 768px) {
+    .hero-section {
+      background-position: center center;
+    }
     .hero-image-container {
       width: 100%;
     }
 
     .hero-text-container {
       width: 100%;
-      margin-top: 2rem;
-    }
-
-    .hero-image {
-      width: 190px;
     }
   }
 }
 
 @media screen and (max-width: 456px) {
+  .hero-section {
+    padding-bottom: 30px;
+  }
   .hero-image {
-    width: 160px;
+    width: 180px;
+    height: 350px;
   }
 
   .left-hero-image {
@@ -77,8 +75,12 @@
 }
 
 @media screen and (max-width: 380px) {
+  .hero-image-container {
+    margin-top: 0rem;
+  }
   .hero-image {
     width: 150px;
+    height: 300px;
   }
 
   .left-hero-image {
@@ -88,4 +90,49 @@
   .right-hero-image {
     margin-right: -90px;
   }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.left-hero-image {
+  animation: slideFromLeft 1s ease-out forwards;
+}
+
+.right-hero-image {
+  animation: slideFromRight 1s ease-out forwards;
+}
+
+.hero-text-container {
+  animation: slideFromBottom 1s ease-out forwards;
 }

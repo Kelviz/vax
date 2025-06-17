@@ -1,12 +1,39 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import { ImQuotesLeft } from "react-icons/im";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import "./SectionEight.css";
 
 const SectionEight = () => {
   const scrollContainerRef = useRef(null);
+  const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            titleRef.current?.classList.add("animate");
+            cardsRef.current.forEach((card, index) => {
+              setTimeout(() => {
+                card?.classList.add("animate");
+              }, 100 * (index + 1));
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleScroll = (direction) => {
     if (scrollContainerRef.current) {
@@ -42,8 +69,11 @@ const SectionEight = () => {
   ];
 
   return (
-    <div className="section-eight-container">
-      <h1 className="font-bold lg:text-3xl md:text-3xl text-2xl text-center">
+    <div ref={sectionRef} className="section-eight-container">
+      <h1
+        ref={titleRef}
+        className="font-bold md:text-3xl text-xl text-center animate-from-bottom"
+      >
         Transformative Patients' Experiences
       </h1>
       <div className="section-eight-wrapper mt-8">
@@ -57,7 +87,11 @@ const SectionEight = () => {
 
         <div className="section-eight-content" ref={scrollContainerRef}>
           {patients.map((patient, index) => (
-            <div key={index} className="patient-card">
+            <div
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+              className="patient-card"
+            >
               <Image
                 src={patient.image}
                 alt={`Patient ${index + 1}`}
@@ -74,7 +108,7 @@ const SectionEight = () => {
                   {patient.feedback}
                 </p>
                 <div className="w-full flex justify-end lg:mt-8 md:mt-8 mt-4">
-                  <ImQuotesLeft className="text-white lg:text-2xl text-lg mb-2" />
+                  <ImQuotesRight className="text-white lg:text-2xl text-lg mb-2" />
                 </div>
               </div>
             </div>

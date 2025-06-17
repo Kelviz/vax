@@ -10,7 +10,7 @@ const HeroSection = () => {
     <div className="hero-section">
       <Navbar imgUrl={`/images/logo-black.png`} textColor={`text-black`} />
       <MobileNav logoUrl={`/images/logo-black.png`} textColor={`text-black`} />
-      <div className="w-full flex items-center flex-col lg:flex-row md:flex-row justify-between lg:mt-8 mt-[4rem]">
+      <div className="w-full flex items-center flex-col lg:flex-row md:flex-row justify-between md:mt-8 mt-[2rem]">
         <div className="hero-text-container flex flex-col">
           <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-black">
             Evolution of Science
@@ -51,21 +51,21 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="hero-image-container  h-[400px] relative lg:mt-4 md:mt-2 mt-3 flex justify-center items-center">
+        <div className="hero-image-container  h-[400px] relative lg:mt-4 md:mt-2 mt-8 flex justify-center items-center">
           <Image
-            src="/images/Rectangle-phone.png"
+            src="/images/home-hero-2.png"
             alt="hero"
             width={500}
             height={500}
-            className="h-auto hero-image left-hero-image  mt-[-10] lg:ml-[-200px]  absolute ml-[-180px] shadow-lg z-10 rounded-4xl"
+            className=" hero-image left-hero-image  mt-[-10] lg:ml-[-200px]  absolute ml-[-180px]  z-10 rounded-4xl"
           />
 
           <Image
-            src="/images/Rectangle-phone.png"
+            src="/images/home-hero-3.png"
             alt="hero"
             width={500}
             height={500}
-            className=" h-auto hero-image right-hero-image  mt-[100px] shadow-2xl lg:mr-[-140px]  mr-[-120px] rounded-4xl"
+            className=" hero-image right-hero-image  mt-[100px]  lg:mr-[-140px]  mr-[-120px] rounded-4xl"
           />
         </div>
       </div>

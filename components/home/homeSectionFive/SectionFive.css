@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   color: var(--text-color);
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .section-five-content {
@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 1000px) {
   .section-five-content {
-    padding: 30px 50px;
+    padding: 20px 50px;
   }
 }
 
@@ -42,4 +42,35 @@
   .section-five-container-image {
     width: 100%;
   }
+}
+
+.animate-from-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-from-bottom.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
 }

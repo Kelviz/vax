@@ -38,6 +38,14 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.patient-card.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scroll-button {
@@ -87,13 +95,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
   .patient-card {
     width: 100%;
   }
 
   .patient-image {
-    height: 230px;
+    height: auto;
   }
 
   .feedback-text {
@@ -113,4 +121,27 @@
   .feedback-text {
     font-size: 13px;
   }
+}
+
+.animate-from-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-from-bottom.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
 }

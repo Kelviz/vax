@@ -64,6 +64,30 @@
   display: none;
 }
 
+/* Animation Styles */
+.animate-from-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-from-bottom.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
   .section-seven-container {

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import "./SectionSix.css";
 
@@ -16,10 +17,41 @@ const circleLines = (size) => {
 };
 
 const SectionSix = () => {
+  const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const circleContainerRef = useRef(null);
+  const mobileCircleContainerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            titleRef.current?.classList.add("animate");
+            descriptionRef.current?.classList.add("animate");
+            circleContainerRef.current?.classList.add("animate");
+            mobileCircleContainerRef.current?.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="section-six-container ">
-      <div className="w-full flex flex-col-reverse lg:flex-row md:flex-row gap-4 justify-center   lg:mt-8 md:mt-8 flex-reverse">
-        <div className="circle-container lg:w-[50%] md:w-[50%] w-full">
+    <div ref={sectionRef} className="section-six-container">
+      <div className="w-full flex flex-col-reverse lg:flex-row md:flex-row gap-4 justify-between lg:mt-8 md:mt-8 flex-reverse">
+        <div
+          ref={circleContainerRef}
+          className="circle-container lg:w-[40%] md:w-[60%] w-full animate-from-bottom delay-200"
+        >
           {circleLines(300)}
           {circleLines(320)}
           {circleLines(340)}
@@ -27,7 +59,7 @@ const SectionSix = () => {
           {circleLines(380)}
 
           <Image
-            src="/images/section-6.png"
+            src="/images/home-section-six-1.png"
             alt="Section six 1 Image"
             width={500}
             height={500}
@@ -35,7 +67,10 @@ const SectionSix = () => {
           />
         </div>
 
-        <div className="circle-container-small-mobile lg:w-[60%] md:w-[60%] w-full">
+        <div
+          ref={mobileCircleContainerRef}
+          className="circle-container-small-mobile lg:w-[60%] md:w-[60%] w-full animate-from-bottom delay-200"
+        >
           {circleLines(250)}
           {circleLines(270)}
           {circleLines(290)}
@@ -43,7 +78,7 @@ const SectionSix = () => {
           {circleLines(340)}
 
           <Image
-            src="/images/section-6.png"
+            src="/images/home-section-six-1.png"
             alt="Section six 1 Image"
             width={500}
             height={500}
@@ -51,11 +86,18 @@ const SectionSix = () => {
           />
         </div>
 
-        <div className="lg:w-[40%] md:w-[50%] w-full md:justify-center flex flex-col lg:mt-[5rem] md:mt-[5rem] mt-[2rem] justify-center items-center">
-          <h1 className="font-bold text-wrap sm:text-3xl text-2xl w-full md:text-left md:text-left text-center">
+        <div className="lg:w-[60%] md:w-[40%] md:mt-0  w-full flex flex-col items-center">
+          {" "}
+          <h1
+            ref={titleRef}
+            className="font-bold md:mt-[7rem] text-wrap sm:text-3xl text-2xl w-full md:text-left md:text-left text-center animate-from-bottom"
+          >
             Find our vaccine center nearest to you
           </h1>
-          <p className="mt-5 w-full md:text-left md:text-left text-center text-wrap">
+          <p
+            ref={descriptionRef}
+            className="mt-5 w-full md:text-left md:text-left text-center text-wrap animate-from-bottom delay-100"
+          >
             Visit their website for the most up-to-date information on
             availability and locations.
           </p>

@@ -1,10 +1,41 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import "./SectionThree.css";
 
 const SectionThree = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+  const leftLineRef = useRef(null);
+  const rightLineRef = useRef(null);
+  const desktopLeftLineRef = useRef(null);
+  const desktopRightLineRef = useRef(null);
+  const mobileCardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            contentRef.current?.classList.add("animate");
+            leftLineRef.current?.classList.add("animate");
+            rightLineRef.current?.classList.add("animate");
+            desktopLeftLineRef.current?.classList.add("animate");
+            desktopRightLineRef.current?.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const secThreePosts = [
     {
@@ -28,21 +59,40 @@ const SectionThree = () => {
   ];
 
   return (
-    <div className="section-three-container">
-      <h1 className="font-bold lg:text-4xl md:text-3xl text-2xl text-center">
+    <div className="section-three-container" ref={sectionRef}>
+      <h1 className="font-bold md:text-3xl text-xl text-center">
         The New Future of Health is Here
       </h1>
-      <p className="lg:text-[16px] md:text-[16px] text-[14px] text-center mt-3">
+      <p className=" md:text-[16px] text-[14px] text-center mt-3">
         Get vaccinated and never worry about living.
       </p>
 
-      <div className="flex w-[100%] justify-center items-center gap-3 lg:mt-[8rem] mt-[6rem] relative">
-        {/* Desktop View */}
-        <div className="hidden sm:flex w-full  justify-center items-center gap-3">
+      <div
+        ref={contentRef}
+        className="flex w-[100%] justify-center items-center gap-3 md:mt-8 mt-[2rem] content-animate"
+      >
+        {/* Desktop View */}{" "}
+        <div className="hidden sm:flex w-full relative justify-center items-center gap-3">
+          <div
+            ref={desktopLeftLineRef}
+            className="absolute left-line top-[0px] left-[0px] z-10"
+          >
+            <div className="w-[150px] h-[10px] bg-[#148782] rounded-br-full rounded-tr-full"></div>
+            <div className="w-[10px] h-[150px] bg-[#148782] rounded-b-full"></div>
+          </div>
+
+          <div
+            ref={desktopRightLineRef}
+            className="absolute right-line  bottom-[0px] flex justify-end items-end flex-row-reverse right-[0px] z-10"
+          >
+            <div className="w-[10px] h-[150px] bg-[#148782] rounded-t-full"></div>
+            <div className="w-[150px] h-[10px] bg-[#148782] rounded-bl-full rounded-tl-full"></div>
+          </div>
+
           {secThreePosts.map((post, index) => (
             <div
               key={index}
-              className="lg:w-[30%] md:w-[30%] w-[25%]  flex flex-col justify-center items-center"
+              className="lg:w-[30%] md:w-[30%] w-[25%]  h-[400px]  flex flex-col justify-center items-center cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-105"
             >
               <div className="lg:w-[60px] lg:h-[60px]  w-[50px] h-[50px] bg-[#D9D9D9] rounded-full flex justify-center items-center">
                 <Image
@@ -57,18 +107,36 @@ const SectionThree = () => {
                 <h1 className="font-bold lg:text-xl md:text-md text-sm mt-4">
                   {post.title}
                 </h1>
-                <p className="text-[14px] h-[170px] text-center mt-8">
-                  {post.detail}
-                </p>
+                <p className="text-[14px] text-center mt-8">{post.detail}</p>
               </div>
             </div>
           ))}
-        </div>
 
+          <div
+            ref={leftLineRef}
+            className="absolute left-line lg:top-0 md:top-[0px] top-[0px] left-[0px] md:left-[0px]"
+          >
+            <div className="w-[150px] h-[10px]  bg-[#148782] rounded-br-full rounded-tr-full"></div>
+            <div className="w-[10px] h-[150px]  bg-[#148782] rounded-b-full"></div>
+          </div>
+
+          <div
+            ref={rightLineRef}
+            className="absolute right-line lg:bottom-[0px] md:bottom-[0px] bottom-[0px]  flex justify-end items-end flex-row-reverse right-[0px]  lg:right-[0px] md:right-[0px]"
+          >
+            <div className="w-[10px] h-[150px]  bg-[#148782] rounded-t-full"></div>
+            <div className="w-[150px] h-[10px]  bg-[#148782] rounded-bl-full rounded-tl-full"></div>
+          </div>
+        </div>{" "}
         {/* Mobile View */}
-        <div className="sm:hidden  w-full justify-center items-center flex flex-col mt-8">
-          <div className="w-[50%] mobile-card flex flex-col justify-center items-center">
-            <div className=" w-[60px] h-[60px] bg-[#D9D9D9] rounded-full flex justify-center items-center">
+        <div className="sm:hidden w-full justify-center items-center flex flex-col mt-5 relative">
+          <div
+            ref={mobileCardRef}
+            className={`w-[80%] h-[300px] mobile-card flex flex-col justify-center items-center ${
+              isAnimating ? "slide-enter" : ""
+            }`}
+          >
+            <div className="w-[60px] h-[60px] bg-[#D9D9D9] rounded-full flex justify-center items-center">
               <Image
                 src={secThreePosts[activeIndex].image}
                 alt="section-three"
@@ -87,30 +155,68 @@ const SectionThree = () => {
             </div>
           </div>
 
+          {/* Lines for mobile */}
+          <div
+            ref={leftLineRef}
+            className="absolute left-line top-[0px] left-[0px] z-10"
+          >
+            <div className="w-[100px] h-[10px] bg-[#148782] rounded-br-full rounded-tr-full"></div>
+            <div className="w-[10px] h-[100px] bg-[#148782] rounded-b-full"></div>
+          </div>
+
+          <div
+            ref={rightLineRef}
+            className="absolute right-line bottom-[0px] flex justify-end items-end flex-row-reverse right-[0px] z-10"
+          >
+            <div className="w-[10px] h-[100px] bg-[#148782] rounded-t-full"></div>
+            <div className="w-[100px] h-[10px] bg-[#148782] rounded-bl-full rounded-tl-full"></div>
+          </div>
+
           {/* Dots Navigation */}
-          <div className="flex absolute z-20 top-[250px] justify-center items-center gap-2 mt-8">
+          <div className="flex absolute z-20 top-[300px] justify-center items-center gap-2 mt-8">
             {secThreePosts.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => {
+                  if (!isAnimating && index !== activeIndex) {
+                    setIsAnimating(true);
+
+                    // Start exit animations
+                    mobileCardRef.current?.classList.add("slide-exit");
+                    leftLineRef.current?.classList.add("slide-out");
+                    rightLineRef.current?.classList.add("slide-out");
+
+                    setTimeout(() => {
+                      setActiveIndex(index);
+
+                      // Remove exit classes
+                      mobileCardRef.current?.classList.remove("slide-exit");
+                      leftLineRef.current?.classList.remove("slide-out");
+                      rightLineRef.current?.classList.remove("slide-out");
+
+                      // Add entrance classes
+                      mobileCardRef.current?.classList.add("slide-enter");
+                      leftLineRef.current?.classList.add("slide-in");
+                      rightLineRef.current?.classList.add("slide-in");
+
+                      setTimeout(() => {
+                        // Remove entrance classes
+                        mobileCardRef.current?.classList.remove("slide-enter");
+                        leftLineRef.current?.classList.remove("slide-in");
+                        rightLineRef.current?.classList.remove("slide-in");
+                        setIsAnimating(false);
+                      }, 500);
+                    }, 500);
+                  }
+                }}
                 className={`w-3 h-3 rounded-full ${
                   activeIndex === index ? "bg-[#FF981E]" : "bg-gray-300"
-                }`}
+                } transition-colors duration-300`}
                 aria-label={`Show slide ${index + 1}`}
               />
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="absolute left-line lg:top-[180px] md:top-[180px] top-[160px] left-[20px] lg:left-[100px] md:left-[30px]">
-        <div className="w-[150px] h-[10px]  bg-[#148782] rounded-br-full rounded-tr-full"></div>
-        <div className="w-[10px] h-[150px]  bg-[#148782] rounded-b-full"></div>
-      </div>
-
-      <div className="absolute lg:bottom-[45px] md:bottom-[45px] bottom-[-35px]  flex justify-end items-end flex-row-reverse right-[20px]  lg:right-[100px] md:right-[30px]">
-        <div className="w-[10px] h-[150px]  bg-[#148782] rounded-t-full"></div>
-        <div className="w-[150px] h-[10px]  bg-[#148782] rounded-bl-full rounded-tl-full"></div>
       </div>
     </div>
   );

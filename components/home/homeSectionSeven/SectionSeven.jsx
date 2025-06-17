@@ -6,6 +6,30 @@ import "./SectionSeven.css";
 const SectionSeven = () => {
   const [activeVideo, setActiveVideo] = useState(0);
   const videoRef = useRef(null);
+  const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const desktopVideosRef = useRef(null);
+  const mobileVideoRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            titleRef.current?.classList.add("animate");
+            desktopVideosRef.current?.classList.add("animate");
+            mobileVideoRef.current?.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handlePlay = (event) => {
     const video = event.target;
@@ -44,13 +68,18 @@ const SectionSeven = () => {
   ];
 
   return (
-    <div className="section-seven-container">
-      <h1 className="font-bold lg:text-3xl md:text-3xl text-2xl mt-4 text-center">
+    <div ref={sectionRef} className="section-seven-container">
+      <h1
+        ref={titleRef}
+        className="font-bold md:text-3xl text-xl text-center animate-from-bottom"
+      >
         See the Videos of Our Vaccination Process{" "}
       </h1>
-
       {/* Desktop View */}
-      <div className="flex section-seven-videos mt-8">
+      <div
+        ref={desktopVideosRef}
+        className="flex section-seven-videos mt-14 animate-from-bottom delay-100"
+      >
         {videos.map((video, index) => (
           <video
             key={index}
@@ -63,10 +92,12 @@ const SectionSeven = () => {
             Your browser does not support the video tag.
           </video>
         ))}
-      </div>
-
+      </div>{" "}
       {/* Mobile View */}
-      <div className="md:hidden w-full mt-8">
+      <div
+        ref={mobileVideoRef}
+        className="md:hidden w-full mt-8 animate-from-bottom delay-100"
+      >
         <video
           ref={videoRef}
           controls

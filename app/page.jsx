@@ -11,7 +11,7 @@ import SectionNine from ".././components/home/homeSectionNine/SectionNine";
 
 export default function Home() {
   const text = "Join us on the journey download our app for free today";
-  const imgUrl = "/images/Rectangle-phone.png";
+  const imgUrl = "/images/feature-sec-six.png";
   return (
     <main className="flex flex-col items-center justify-between min-h-screen">
       <HeroSection />
