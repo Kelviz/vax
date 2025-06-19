@@ -30,7 +30,7 @@ const MobileNav = ({ logoUrl, textColor }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="w-full h-auto mobile-nav flex flex-col absolute top-0 left-0 z-50 py-2 px-4 transition-all duration-300 ease-in-out bg-white shadow-lg">
+        <div className="w-full h-auto mobile-nav flex flex-col absolute top-0 left-0 z-30 py-2 px-4 transition-all duration-300 ease-in-out shadow-lg">
           <div className="w-full flex justify-end rounded-md">
             <IoMdClose
               className="text-[40px] rounded-md cursor-pointer bg-[#D9D9D9] p-2 font-bolder text-[#148782]"

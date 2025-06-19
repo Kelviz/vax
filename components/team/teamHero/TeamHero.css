@@ -24,6 +24,7 @@
 
 @media screen and (max-width: 768px) {
   .team-hero-section-container {
-    background-position: center center;
+    background-position: center top;
+    background-image: url("/images/team-hero-mobile.png");
   }
 }

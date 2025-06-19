@@ -51,7 +51,7 @@ const ProvisionHero = () => {
         />
       </div>
 
-      <div className="lg:w-[40%] md:w-[50%]  px-8 flex flex-col lg:justify-start md:justify-start justify-center items-center lg:mt-[3rem] md:mt-[3rem] mt-17 relative z-20">
+      <div className="lg:w-[40%] md:w-[50%]  px-8 flex flex-col lg:justify-start md:justify-start justify-center items-center lg:mt-[3rem] md:mt-[3rem] mt-17 relative z-10">
         <h1
           className="text-white font-bold text-2xl md:text-3xl lg:text-4xl text-center lg:mt-4 md:mt-4 mt-0 animate-from-bottom"
           style={{ animationDelay: "0.6s" }}
