@@ -30,7 +30,7 @@ const ProvisionHero = () => {
   }, []);
 
   return (
-    <div className="provision-hero-container md:h-auto h-[90vh] relative">
+    <div className="provision-hero-container md:h-auto h-[80vh] relative">
       {/* Mobile Background Image */}
       <div className="md:hidden absolute inset-0 w-full h-full">
         <Image
