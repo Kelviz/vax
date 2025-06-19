@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import "./SectionThree.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 import { useState } from "react";
 
 const SectionThree = () => {
@@ -50,36 +52,43 @@ const SectionThree = () => {
   };
 
   return (
-    <div className="record-section-three-container">
-      <p className="lg:text-3xl px-[20px] text-xl md:text-left text-center font-bold md:mt-[3rem] mt-[4rem]">
-        How we store your Vaccine history?
-      </p>
-      <div className="record-section-three-contents mt-[2rem]">
-        {/* desktop view */}
-        <div className="hidden md:grid w-full grid-cols-3 justify-center gap-8">
+    <div className="record-section-three-container md:mt-[3rem] mt-[3rem]">
+      <h1 className="text-center text-xl md:text-3xl font-bold animate-from-bottom">
+        Ways to keep track of your Information
+      </h1>{" "}
+      <div className="record-section-three-contents mt-8">
+        {/* Desktop View */}
+        <div className="hidden lg:flex md:flex w-full flex-wrap justify-center gap-8">
           {data.map((item, index) => (
-            <div className="flex w-[100%] flex-col" key={index}>
-              <div className="w-[70px] h-[70px] flex justify-center items-center rounded-full bg-white p-2">
+            <div
+              key={index}
+              className="lg:w-[30%] md:w-[45%] flex flex-col items-center animate-from-bottom"
+              style={{ animationDelay: `${0.2 + index * 0.2}s` }}
+            >
+              <div className="w-[70px] h-[70px] flex justify-center items-center rounded-full bg-white p-2 mb-4">
                 <Image
                   src={item.image}
-                  alt="record image"
+                  alt={item.title}
                   width={50}
                   height={50}
                   className="w-[90%] h-[90%] object-cover"
                 />
               </div>
-              <h2 className="font-semibold text-white text-lg mt-3 h-[50px]">
+              <h3 className="text-lg font-semibold text-white text-center">
                 {item.title}
-              </h2>
-              <p className="text-gray-200 text-[16px] mt-2">
+              </h3>
+              <p className="text-gray-200 text-center mt-2 px-4">
                 {item.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* mobile view */}
-        <div className="md:hidden w-full">
+        {/* Mobile View */}
+        <div
+          className="lg:hidden md:hidden flex flex-col items-center animate-from-bottom"
+          style={{ animationDelay: "0.2s" }}
+        >
           <div className="flex flex-col items-center">
             <div className="w-[80%] min-h-[200px] flex flex-col items-center">
               <div className="w-[70px] h-[70px] flex justify-center items-center rounded-full bg-white p-2">
@@ -121,4 +130,4 @@ const SectionThree = () => {
   );
 };
 
-export default SectionThree;
+export default withScrollAnimation(SectionThree);

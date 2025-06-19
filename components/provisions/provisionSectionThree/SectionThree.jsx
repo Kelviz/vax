@@ -1,22 +1,31 @@
+"use client";
 import Image from "next/image";
 import "./SectionThree.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 
 const SectionThree = () => {
   return (
-    <div className="provision-sec-three-container ">
+    <div className="provision-sec-three-container">
       <div className="w-full relative">
-        <div className="w-full  flex flex-col-reverse lg:flex-row md:flex-row lg:justify-between md:justify-between justify-center">
-          <div className="lg:w-[50%] md:w-[50%] w-full mt-8 lg:mt-0 md:mt-0">
+        <div className="w-full flex flex-col-reverse lg:flex-row md:flex-row lg:justify-between md:justify-between justify-center">
+          <div
+            className="lg:w-[50%] md:w-[50%] w-full mt-8 lg:mt-0 md:mt-0 animate-from-bottom"
+            style={{ animationDelay: "0.2s" }}
+          >
             <Image
               src="/images/provision-sec-three-1.png"
               alt="provision image"
               width={500}
               height={500}
-              className="w-full h-[480px]  lg:h-[600px] md:h-[680px]  m-0 p-0"
+              className="w-full h-[400px] object-cover lg:h-[600px] md:h-[680px] m-0 p-0"
             />
           </div>
-          <div className="lg:w-[50%] md:w-[50%] w-full flex flex-col  justify-center lg:justify-start md:justify-start  px-3 lg:px-8 md:px-8 ">
-            <h2 className="font-bold text-center lg:text-left md:text-left text-2xl ">
+          <div
+            className="lg:w-[50%] md:w-[50%] w-full flex flex-col justify-center lg:justify-start md:justify-start px-3 lg:px-8 md:px-8 animate-from-bottom"
+            style={{ animationDelay: "0s" }}
+          >
+            <h2 className="font-bold text-center lg:text-left md:text-left md:text-2xl text-xl ">
               Embark on a health journey with no regret
             </h2>
 
@@ -27,8 +36,11 @@ const SectionThree = () => {
           </div>
         </div>
 
-        <div className="lg:w-[50%] md:w-[50%] w-full flex flex-col lg:flex-row lg:justify-between md:flex-row md:justify-between justify-center items-center gap-[8rem] lg:gap-0 md:gap-0 lg:absolute md:absolute bottom-0 right-0 px-3 lg:px-8 md:px-8 mt-[9rem] lg:mt-0 md:mt-0 ">
-          <div className="lg:w-[50%] md:w-[50%] w-[90%] h-[350px] md:h-[380px] p-3  flex flex-col items-center  relative bg-[#148782] text-white">
+        <div className="lg:w-[50%] md:w-[50%] w-full flex flex-col lg:flex-row lg:justify-between md:flex-row md:justify-between justify-center items-center gap-[8rem] lg:gap-0 md:gap-0 lg:absolute md:absolute bottom-0 right-0 px-3 lg:px-8 md:px-8 mt-[9rem] lg:mt-0 md:mt-0">
+          <div
+            className="lg:w-[50%] md:w-[50%] w-[90%] h-[350px] md:h-[380px] p-3 flex flex-col items-center relative bg-[#148782] text-white animate-from-bottom"
+            style={{ animationDelay: "0.4s" }}
+          >
             <Image
               src="/images/polygon.svg"
               alt="polygon"
@@ -46,7 +58,10 @@ const SectionThree = () => {
             </p>
           </div>
 
-          <div className="lg:w-[50%] md:w-[50%] w-[90%] h-[350px] md:h-[380px] p-3  flex flex-col items-center  relative bg-[#148782] text-white">
+          <div
+            className="lg:w-[50%] md:w-[50%] w-[90%] h-[350px] md:h-[380px] p-3 flex flex-col items-center relative bg-[#148782] text-white animate-from-bottom"
+            style={{ animationDelay: "0.6s" }}
+          >
             <Image
               src="/images/polygon.svg"
               alt="polygon"
@@ -69,4 +84,4 @@ const SectionThree = () => {
   );
 };
 
-export default SectionThree;
+export default withScrollAnimation(SectionThree);

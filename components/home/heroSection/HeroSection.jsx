@@ -45,7 +45,7 @@ const HeroSection = () => {
                 alt="ios"
                 width={200}
                 height={200}
-                className="w-[70%] h-[70%] object-cover"
+                className="w-[100%] h-full object-contain"
               />
             </Link>
           </div>

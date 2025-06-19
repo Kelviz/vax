@@ -1,6 +1,5 @@
 .provision-hero-container {
   width: 100%;
-  min-height: 80vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,7 +31,7 @@
   padding: 0px 100px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .provision-navbar {
     padding: 0 50px;
   }

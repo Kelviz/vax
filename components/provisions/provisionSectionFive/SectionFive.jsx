@@ -1,10 +1,13 @@
+"use client";
 import Image from "next/image";
 import "./SectionFive.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 
 const SectionFive = () => {
   return (
     <div className="provision-sec-five-container">
-      <div className="w-full bg-[#148782] flex justify-between items-center gap-2 text-white px-2 py-4">
+      <div className="w-full bg-[#148782] flex justify-between items-center gap-2 text-white px-2 py-4 animate-from-bottom">
         <Image
           src="/images/provision-sec-five.png"
           alt="provision image"
@@ -17,7 +20,7 @@ const SectionFive = () => {
           Your donation can save thousands of life. Be a hero today
         </p>
 
-        <button className="bg-[#FF981E] lg:px-8 md:px-5 px-2 py-2 lg:py-4 md:py-4 font-bold text-[12px] lg:text-lg md:text-lg  text-white hover:opacity-95 transition-opacity delay-100">
+        <button className="bg-[#FF981E] lg:px-8 md:px-5 px-2 py-2 lg:py-4 md:py-4 font-bold text-[12px] lg:text-lg md:text-lg text-white hover:opacity-95 transition-opacity delay-100">
           Donate
         </button>
       </div>
@@ -25,4 +28,4 @@ const SectionFive = () => {
   );
 };
 
-export default SectionFive;
+export default withScrollAnimation(SectionFive);

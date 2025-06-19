@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import Navbar from "../../navbar/Navbar";
 import MobileNav from "../../navbar/MobileNav";
 import "./RecordHero.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 
 const RecordHero = () => {
   return (
@@ -10,10 +13,16 @@ const RecordHero = () => {
       <MobileNav logoUrl={`/images/logo-white.png`} textColor={`text-white`} />
 
       <div className="w-full mt-8 flex justify-center items-center flex-col">
-        <h1 className="text-white lg:text-4xl md:text-4xl text-2xl  font-bold">
+        <h1
+          className="text-white lg:text-4xl md:text-4xl text-2xl  font-bold animate-from-bottom"
+          style={{ animationDelay: "0.2s" }}
+        >
           Be Knowledgable <br /> Be Well-informed
         </h1>
-        <p className="lg:mt-4 mt-2 mb-4 md:mb-0 text-white h-text">
+        <p
+          className="lg:mt-4 mt-2 mb-4 md:mb-0 text-white h-text animate-from-bottom"
+          style={{ animationDelay: "0.4s" }}
+        >
           Know your vaccine history and data
         </p>
       </div>
@@ -25,7 +34,8 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-1 absolute lg:w-[35px] lg:h-[35px] md:w-[35px] md:h-[35px] w-[25px] h-[25px] top-[-110px] left-[5%]"
+            className="record-hero-1 absolute lg:w-[35px] lg:h-[35px] md:w-[35px] md:h-[35px] w-[25px] h-[25px] top-[-110px] left-[5%] animate-from-bottom"
+            style={{ animationDelay: "0.6s" }}
           />
 
           <Image
@@ -33,7 +43,8 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-2 absolute lg:w-[35px] lg:h-[35px] md:w-[35px] md:h-[35px] w-[25px] h-[25px] top-[-110px] right-[5%]"
+            className="record-hero-2 absolute lg:w-[35px] lg:h-[35px] md:w-[35px] md:h-[35px] w-[25px] h-[25px] top-[-110px] right-[5%] animate-from-bottom"
+            style={{ animationDelay: "0.6s" }}
           />
 
           <Image
@@ -41,7 +52,8 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-3  absolute w-[55px] h-[55px] top-[-30px] left-[-8%]"
+            className="record-hero-3  absolute w-[55px] h-[55px] top-[-30px] left-[-8%] animate-from-bottom"
+            style={{ animationDelay: "0.8s" }}
           />
 
           <Image
@@ -49,7 +61,8 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-4 absolute w-[55px] h-[55px] top-[-30px] right-[-8%]"
+            className="record-hero-4 absolute w-[55px] h-[55px] top-[-30px] right-[-8%] animate-from-bottom"
+            style={{ animationDelay: "0.8s" }}
           />
 
           <Image
@@ -57,7 +70,8 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-5 absolute w-[75px] h-[75px] top-[70px] left-[-5%]"
+            className="record-hero-5 absolute w-[75px] h-[75px] top-[70px] left-[-5%] animate-from-bottom"
+            style={{ animationDelay: "1s" }}
           />
 
           <Image
@@ -65,7 +79,8 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-6 absolute w-[75px] h-[75px] top-[70px] right-[-5%]"
+            className="record-hero-6 absolute w-[75px] h-[75px] top-[70px] right-[-5%] animate-from-bottom"
+            style={{ animationDelay: "1s" }}
           />
 
           <Image
@@ -73,7 +88,8 @@ const RecordHero = () => {
             alt="Record Hero Image"
             width={500}
             height={500}
-            className="record-hero-7 md:absolute lg:z-50 md:z-50 z-0 md:w-[250px] w-[200px] md:h-[450px]  h-[320px]  md:top-[30px] top-[30px] md:left-1/2 md:-translate-x-1/2"
+            className="record-hero-7 md:absolute lg:z-50 md:z-50 z-0 md:w-[250px] w-[200px] md:h-[450px]  h-[320px]  md:top-[30px] top-[30px] md:left-1/2 md:-translate-x-1/2 animate-from-bottom"
+            style={{ animationDelay: "0.8s" }}
           />
         </div>
       </div>
@@ -81,4 +97,4 @@ const RecordHero = () => {
   );
 };
 
-export default RecordHero;
+export default withScrollAnimation(RecordHero);

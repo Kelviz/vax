@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
 import "./SectionFour.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 
 const SectionFour = () => {
   return (
     <div className="feature-section-four-container lg:mt-[5rem] md:mt-[5rem] mt-[2rem]">
       <div className="w-full flex lg:flex-row md:flex-row flex-col lg:gap-4 md:gap-2 gap-8 justify-center items-center">
-        <div className="lg:w-[45%] md:w-[50%] w-full shadow-lg border-l-12 bg-[#148782] text-white border-[#FF981E] flex flex-col justify-center items-center">
+        <div className="lg:w-[45%] md:w-[50%] w-full shadow-lg border-l-12 bg-[#148782] text-white border-[#FF981E] flex flex-col justify-center items-center animate-from-bottom">
           <Image
             src="/images/feature-sec-four-1.png"
             alt="feature-sec-four-image"
@@ -28,7 +31,7 @@ const SectionFour = () => {
           </div>
         </div>
 
-        <div className="lg:w-[45%] md:w-[50%] w-full shadow-lg lg:border-r-12 md:border-r-12 lg:border-l-0 md:border-l-0 border-l-12 border-[#FF981E] bg-[#148782] text-white flex flex-col justify-center items-center">
+        <div className="lg:w-[45%] md:w-[50%] w-full shadow-lg lg:border-r-12 md:border-r-12 lg:border-l-0 md:border-l-0 border-l-12 border-[#FF981E] bg-[#148782] text-white flex flex-col justify-center items-center animate-from-bottom">
           <Image
             src="/images/feature-sec-four-2.png"
             alt="feature-sec-four-image"
@@ -54,4 +57,4 @@ const SectionFour = () => {
   );
 };
 
-export default SectionFour;
+export default withScrollAnimation(SectionFour);

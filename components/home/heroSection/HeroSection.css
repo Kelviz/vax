@@ -24,7 +24,7 @@
   height: 450px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .hero-section {
     padding: 0 50px;
     padding-bottom: 80px;
@@ -79,8 +79,8 @@
     margin-top: 0rem;
   }
   .hero-image {
-    width: 150px;
-    height: 300px;
+    width: 170px;
+    height: 320px;
   }
 
   .left-hero-image {

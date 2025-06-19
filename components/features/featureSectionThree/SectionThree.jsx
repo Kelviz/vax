@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import "./SectionThree.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const SectionThree = () => {
@@ -66,7 +68,7 @@ const SectionThree = () => {
 
   return (
     <div className="feature-section-three-container lg:mt-[8rem] md:mt-[8rem] mt-[12rem] ">
-      <h1 className="text-lg lg:text-4xl md:text-3xl text-center mb-12 px-4">
+      <h1 className="text-lg lg:text-4xl md:text-3xl text-center mb-12 px-4 animate-from-bottom">
         Get issues resolved from the comfort of your home
       </h1>
 
@@ -85,7 +87,8 @@ const SectionThree = () => {
           {bigScreenItems.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center lg:w-[300px] md:w-[250px]"
+              className={`flex flex-col items-center lg:w-[300px] md:w-[250px] animate-from-bottom`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="lg:w-[250px] md:w-[200px] lg:h-[400px] md:h-[350px] rounded-lg overflow-hidden mb-4">
                 <Image
@@ -176,4 +179,4 @@ const SectionThree = () => {
   );
 };
 
-export default SectionThree;
+export default withScrollAnimation(SectionThree);

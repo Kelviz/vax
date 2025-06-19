@@ -11,7 +11,7 @@
   padding-right: 100px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .feature-hero-container {
     padding-left: 50px;
   }
@@ -44,6 +44,7 @@
 @media screen and (max-width: 470px) {
   .feature-hero-img1 {
     width: 300px;
+    height: 400px;
   }
 
   .feature-hero-img2 {

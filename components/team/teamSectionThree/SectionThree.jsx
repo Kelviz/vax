@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import TeamSocials from "../TeamSocials";
 import TeamDetails from "../TeamDetails";
 import "./SectionThree.css";
+import "../animations.css";
+import withScrollAnimation from "../withScrollAnimation";
 
 const SectionThree = () => {
   const data = [
@@ -54,14 +57,15 @@ const SectionThree = () => {
 
   return (
     <div className="team-section-three-container">
-      <h1 className="font-bold md:text-3xl text-xl text-center">
+      <h1 className="font-bold md:text-3xl text-xl text-center animate-from-bottom">
         Medical network
       </h1>
 
       <div className="w-full mt-12 flex flex-wrap justify-center items-center gap-4">
         {data.map((member, index) => (
           <div
-            className="w-[100%] md:w-[350px] flex flex-col items-center gap-4 justify-center relative"
+            className="w-[100%] md:w-[350px] flex flex-col items-center gap-4 justify-center relative animate-from-bottom"
+            style={{ transitionDelay: `${index * 200}ms` }}
             key={index}
           >
             <TeamDetails name={member.name} role={member.role} />
@@ -76,9 +80,9 @@ const SectionThree = () => {
             <TeamSocials />
           </div>
         ))}
+        ;
       </div>
     </div>
   );
 };
-
-export default SectionThree;
+export default withScrollAnimation(SectionThree);

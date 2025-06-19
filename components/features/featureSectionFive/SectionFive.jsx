@@ -1,14 +1,20 @@
+"use client";
 import Image from "next/image";
 import "./SectionFive.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 
 const SectionFive = () => {
   return (
     <div className="feature-section-five-container lg:mt-[2rem] md:mt-[2rem] mt-[2rem] lg:mb-0 md:mb-0 mb-[8rem]">
-      <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center px-2">
+      <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center px-2 animate-from-bottom">
         Health tips for a healthier living
       </h1>
       <div className="w-full flex flex-col lg:flex-row md:flex-row justify-center lg:gap-2 md:gap-2 gap-8 mt-10">
-        <div className="lg:w-[27%] md:w-[30%] w-full shadow-lg rounded-t-4xl rounded-bl-4xl  rounded-br-4xl md:rounded-br-none lg:rounded-br-none flex flex-col items-center">
+        <div
+          className="lg:w-[27%] md:w-[30%] w-full shadow-lg rounded-t-4xl rounded-bl-4xl  rounded-br-4xl md:rounded-br-none lg:rounded-br-none flex flex-col items-center animate-from-bottom"
+          style={{ animationDelay: "0s" }}
+        >
           <Image
             src="/images/feature-sec-five-1.png"
             alt="feature five image"
@@ -30,7 +36,10 @@ const SectionFive = () => {
           </div>
         </div>
 
-        <div className="lg:w-[27%] md:w-[30%] w-full shadow-lg rounded-t-3xl flex flex-col items-center">
+        <div
+          className="lg:w-[27%] md:w-[30%] w-full shadow-lg rounded-t-3xl flex flex-col items-center animate-from-bottom"
+          style={{ animationDelay: "0.2s" }}
+        >
           <Image
             src="/images/feature-sec-five-2.png"
             alt="feature five image"
@@ -52,7 +61,10 @@ const SectionFive = () => {
           </div>
         </div>
 
-        <div className="lg:w-[27%] md:w-[30%] w-full bg-[#148782] text-white shadow-lg rounded-t-4xl  rounded-br-4xl   rounded-bl-4xl lg:rounded-bl-none md:rounded-bl-none flex flex-col items-center">
+        <div
+          className="lg:w-[27%] md:w-[30%] w-full bg-[#148782] text-white shadow-lg rounded-t-4xl  rounded-br-4xl   rounded-bl-4xl lg:rounded-bl-none md:rounded-bl-none flex flex-col items-center animate-from-bottom"
+          style={{ animationDelay: "0.4s" }}
+        >
           <Image
             src="/images/feature-sec-five-3.png"
             alt="feature five image"
@@ -77,4 +89,4 @@ const SectionFive = () => {
   );
 };
 
-export default SectionFive;
+export default withScrollAnimation(SectionFive);

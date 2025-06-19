@@ -1,21 +1,27 @@
+"use client";
 import Image from "next/image";
 import "./SectionTwo.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 
 const SectionTwo = () => {
   return (
     <div className="provision-sec-two-container">
-      <h1 className="text-center text-2xl lg:text-3xl md:text-3xl font-bold ">
+      <h1 className="text-center text-xl  md:text-3xl font-bold animate-from-bottom">
         Need a Specialist? <br /> We are the trusted Experts!
       </h1>
 
-      <div className="w-full flex justify-between bg-[#148782] text-white mt-8">
+      <div
+        className="w-full flex justify-between bg-[#148782] text-white mt-8 animate-from-bottom"
+        style={{ animationDelay: "0.2s" }}
+      >
         <div className="w-[50%]  relative">
           <Image
             src="/images/provision-sec-1.png"
             alt="provision image"
             width={500}
             height={500}
-            className="w-full h-[280px] md:h-[400px]  lg:h-[500px]  m-0 p-0"
+            className="w-full h-[280px] md:h-[400px] object-cover  lg:h-[500px]  m-0 p-0"
           />
           <Image
             src="/images/provision-sec-2.png"
@@ -39,7 +45,10 @@ const SectionTwo = () => {
         </div>
       </div>
 
-      <div className="w-full flex bg-[#148782] text-white">
+      <div
+        className="w-full flex bg-[#148782] text-white animate-from-bottom"
+        style={{ animationDelay: "0.4s" }}
+      >
         <div className="w-[50%] flex flex-col  justify-center px-3 lg:px-8 md:px-8 ">
           <span className="font-bold text-[14px] lg:text-[16px] md:text-[16px]">
             Pediatrician
@@ -59,14 +68,14 @@ const SectionTwo = () => {
             alt="provision image"
             width={500}
             height={500}
-            className="w-full h-[280px] md:h-[400px] lg:h-[500px]"
+            className="w-full h-[280px] md:h-[400px] object-cover lg:h-[500px]"
           />
           <Image
             src="/images/provision-sec-4.png"
             alt="provision image"
             width={500}
             height={500}
-            className="lg:w-[180px] lg:h-[150px] md:w-[150px] md:h-[150px] w-[100px] h-[100px] absolute left-0 top-0"
+            className="lg:w-[180px] object-cover lg:h-[150px] md:w-[150px] md:h-[150px] w-[100px] h-[100px] absolute left-0 top-0"
           />
         </div>
       </div>
@@ -74,4 +83,4 @@ const SectionTwo = () => {
   );
 };
 
-export default SectionTwo;
+export default withScrollAnimation(SectionTwo);

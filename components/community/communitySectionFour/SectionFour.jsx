@@ -1,16 +1,18 @@
+"use client";
 import Image from "next/image";
-
 import "./SectionFour.css";
+import "../animations.css";
+import { withScrollAnimation } from "../withScrollAnimation";
 
 const SectionFour = () => {
   return (
     <div className="community-section-four-container">
-      <h1 className="font-bold md:text-3xl text-xl text-center">
+      <h1 className="font-bold md:text-3xl text-xl text-center animate-from-bottom">
         Recent Events and Campaigns
       </h1>
 
       <div className="w-full flex flex-wrap justify-center items-center mt-10 gap-4">
-        <div className="md:w-[300px] md:h-[300px] w-[90%] h-[300px] rounded-2xl relative flex-shrink-0">
+        <div className="md:w-[300px] md:h-[300px] w-[90%] h-[300px] rounded-2xl relative flex-shrink-0 animate-from-bottom delay-200">
           <Image
             src="/images/community-sec-four-1.png"
             alt="Community Section Four Image 1"
@@ -24,7 +26,7 @@ const SectionFour = () => {
           </div>
         </div>
 
-        <div className="md:w-[300px] md:h-[300px] w-[90%] h-[300px] rounded-2xl relative flex-shrink-0">
+        <div className="md:w-[300px] md:h-[300px] w-[90%] h-[300px] rounded-2xl relative flex-shrink-0 animate-from-bottom delay-400">
           <Image
             src="/images/community-sec-four-2.png"
             alt="Community Section Four Image 1"
@@ -38,7 +40,7 @@ const SectionFour = () => {
           </div>
         </div>
 
-        <div className="md:w-[300px] md:h-[300px] w-[90%] h-[300px] rounded-2xl relative flex-shrink-0">
+        <div className="md:w-[300px] md:h-[300px] w-[90%] h-[300px] rounded-2xl relative flex-shrink-0 animate-from-bottom delay-600">
           <Image
             src="/images/community-sec-four-3.png"
             alt="Community Section Four Image 1"
@@ -56,4 +58,4 @@ const SectionFour = () => {
   );
 };
 
-export default SectionFour;
+export default withScrollAnimation(SectionFour);
