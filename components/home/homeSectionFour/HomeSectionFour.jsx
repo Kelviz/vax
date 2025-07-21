@@ -64,7 +64,7 @@ const HomeSectionFour = () => {
             Vaccine Tracker
           </p>
 
-          <p className="md:text-lg text-[10px] font-bold text-right">
+          <p className="md:text-lg text-[10px] pr-2 font-bold text-right">
             Hospital Database
           </p>
 
@@ -100,7 +100,7 @@ const HomeSectionFour = () => {
             Medication Tracker
           </p>
 
-          <p className="md:text-lg text-[10px] font-bold text-left">
+          <p className="md:text-lg text-[10px] font-bold text-left pl-2">
             Health Blog
           </p>
 

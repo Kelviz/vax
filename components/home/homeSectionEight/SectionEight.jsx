@@ -97,7 +97,7 @@ const SectionEight = () => {
                 alt={`Patient ${index + 1}`}
                 width={500}
                 height={500}
-                className="w-[50%] h-[300px] patient-image"
+                className="w-[50%] h-[300px] object-cover patient-image"
               />
               <div className="w-[50%] flex flex-col items-center justify-center bg-[#148782] lg:px-8 lg:py-4 p-2 text-wrap">
                 <div className="w-full flex lg:mt-8 md:mt-8 mt-4">

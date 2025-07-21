@@ -18,7 +18,7 @@ const Navbar = ({ imgUrl, textColor }) => {
       </Link>
       <div className="flex justify-between  items-center mr-1">
         <nav className="flex  lg:justify-center items-center gap-8">
-          <ul className="flex items-center gap-8">
+          <ul className="flex items-center gap-4">
             <li className="lg:text-[16px] text-[14px] font-semibold cursor-pointer">
               <Link href="/features">Features</Link>
             </li>

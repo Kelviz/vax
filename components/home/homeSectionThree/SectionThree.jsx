@@ -130,6 +130,95 @@ const SectionThree = () => {
         </div>{" "}
         {/* Mobile View */}
         <div className="sm:hidden w-full justify-center items-center flex flex-col mt-5 relative">
+          {/* Navigation Arrows */}
+          <button
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-white rounded-full shadow p-2 flex items-center justify-center"
+            style={{ left: 0 }}
+            aria-label="Previous post"
+            onClick={() => {
+              if (!isAnimating) {
+                const prevIndex =
+                  (activeIndex - 1 + secThreePosts.length) % secThreePosts.length;
+                if (prevIndex !== activeIndex) {
+                  setIsAnimating(true);
+                  mobileCardRef.current?.classList.add("slide-exit");
+                  leftLineRef.current?.classList.add("slide-out");
+                  rightLineRef.current?.classList.add("slide-out");
+                  setTimeout(() => {
+                    setActiveIndex(prevIndex);
+                    mobileCardRef.current?.classList.remove("slide-exit");
+                    leftLineRef.current?.classList.remove("slide-out");
+                    rightLineRef.current?.classList.remove("slide-out");
+                    mobileCardRef.current?.classList.add("slide-enter");
+                    leftLineRef.current?.classList.add("slide-in");
+                    rightLineRef.current?.classList.add("slide-in");
+                    setTimeout(() => {
+                      mobileCardRef.current?.classList.remove("slide-enter");
+                      leftLineRef.current?.classList.remove("slide-in");
+                      rightLineRef.current?.classList.remove("slide-in");
+                      setIsAnimating(false);
+                    }, 500);
+                  }, 500);
+                }
+              }
+            }}
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <button
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-white rounded-full shadow p-2 flex items-center justify-center"
+            style={{ right: 0 }}
+            aria-label="Next post"
+            onClick={() => {
+              if (!isAnimating) {
+                const nextIndex = (activeIndex + 1) % secThreePosts.length;
+                if (nextIndex !== activeIndex) {
+                  setIsAnimating(true);
+                  mobileCardRef.current?.classList.add("slide-exit");
+                  leftLineRef.current?.classList.add("slide-out");
+                  rightLineRef.current?.classList.add("slide-out");
+                  setTimeout(() => {
+                    setActiveIndex(nextIndex);
+                    mobileCardRef.current?.classList.remove("slide-exit");
+                    leftLineRef.current?.classList.remove("slide-out");
+                    rightLineRef.current?.classList.remove("slide-out");
+                    mobileCardRef.current?.classList.add("slide-enter");
+                    leftLineRef.current?.classList.add("slide-in");
+                    rightLineRef.current?.classList.add("slide-in");
+                    setTimeout(() => {
+                      mobileCardRef.current?.classList.remove("slide-enter");
+                      leftLineRef.current?.classList.remove("slide-in");
+                      rightLineRef.current?.classList.remove("slide-in");
+                      setIsAnimating(false);
+                    }, 500);
+                  }, 500);
+                }
+              }
+            }}
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+
           <div
             ref={mobileCardRef}
             className={`w-[80%] h-[300px] mobile-card flex flex-col justify-center items-center ${
